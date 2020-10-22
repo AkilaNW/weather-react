@@ -1,0 +1,141 @@
+#form-input {
+  margin-top: 30px;
+}
+form {
+  margin-top: 35px;
+}
+input {
+  line-height: 7px;
+  padding: 7px 6px;
+}
+.temp {
+  font-size: 50px;
+}
+#icon {
+  position: relative;
+  bottom: 3px;
+}
+.degrees {
+  font-size: 18px;
+}
+#current {
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 1;
+  font-family: inherit;
+}
+
+#units {
+  font-size: 20px;
+  position: relative;
+  top: -25px;
+  font-family: inherit;
+}
+
+img {
+  width: 60px;
+  height: 54px;
+}
+body {
+  font-family: "Roboto";
+}
+
+div.placeholder {
+  width: 20px;
+}
+
+button {
+  display: inline;
+  position: relative;
+  left: 350px;
+  bottom: 35px;
+}
+
+#location {
+  text-align: left;
+  font-weight: normal;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  bottom: 20px;
+}
+
+#temperature {
+  display: block;
+  text-align: center;
+  font-weight: 159;
+  font-size: 43px;
+  line-height: 30px;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  right: 15px;
+  bottom: 15px;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#realFeel {
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: normal;
+  text-align: center;
+  position: relative;
+  bottom: 27px;
+  right: 3px;
+  margin-bottom: 0;
+  font-family: inherit;
+}
+
+h3 {
+  position: relative;
+  right: 3px;
+  top: 10px;
+  margin-bottom: 0;
+}
+
+.weekly-forecast h3 {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  height: 16px;
+  line-height: 15px;
+  padding-top: 7px;
+  text-transform: capitalize;
+}
+div.weekly-temp {
+  position: relative;
+  top: 8px;
+}
+
+#wind-speed {
+  position: relative;
+  left: 12px;
+}
+
+div.time-date {
+  position: relative;
+  bottom: 25px;
+}
+
+#update {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+footer {
+  text-align: center;
+}
+
+#date {
+  text-transform: capitalize;
+}
+#condition {
+  text-transform: capitalize;
+}
+#city {
+  position: relative;
+  bottom: 25px;
+  font-size: 25px;
+  font-weight: light;
+  font-family: "Roboto", sans-serif;
+}

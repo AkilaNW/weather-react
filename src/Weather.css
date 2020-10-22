@@ -1,0 +1,30 @@
+.Weather {
+  margin: 0 auto;
+  margin-top: 10%;
+  padding: 10px 50px;
+  height: 550px;
+  width: 550px;
+  border-radius: 35px;
+  background-image: linear-gradient(to top, #fddb92 0%, #82e2e7 100%);
+  box-shadow: 2px 3px 14px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+.Weather .container {
+  font-size: 17px;
+  text-transform: capitalize;
+  margin-top: 5px;
+  display: inline-block;
+}
+.Weather.weather-temp .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.Weather.weather-temp .active:hover {
+  text-decoration: none;
+}
+.weather-temp {
+  position: relative;
+  left: 165px;
+}
