@@ -5,6 +5,7 @@ import * as serviceWorker from './serviceWorker';
 import Weather from "./Weather";
 import Footer from "./Footer";
 
+import "bootstrap/dist/css/bootstrap.css";
 import "./Weather.css";
 import "./Styles.css";
 
