@@ -15,19 +15,23 @@ export default function Weather() {
   return (
     <div className="Weather">
       <form className="form">
-            <input size="30"
+      <div className="row">
+        <div className="col-9">
+            <input
               type="search"
               className="form-control"
               placeholder="Enter your location"
               autoComplete="off"
             />
-            <input
-              type="submit"
-              value="Search"
-            />
+            </div>
+            <div className="col-3">
+            <input class="btn btn-primary w=100" type="submit" value="Search" />
+            </div>
+            </div>
       </form>
 
       <h1 className="city">{weatherData.city}</h1>
+      <br />
 
       <div className="time-date">
         <p>
