@@ -1,6 +1,20 @@
 import React from "react";
+import axios from "axios";
 
 export default function Weather() {
+  
+function handleResponse(response) {
+    
+alert(`It is ${Math.round(response.data.main.temp)} degrees in London`);
+
+}
+
+let apiKey = "d01a8031900e2023529537f3248e4cb4";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`
+
+axios.get(apiUrl).then(handleResponse);
+
+
   let weatherData = {
     city: "Madrid",
     date: "Sunday 09:00",
@@ -22,6 +36,7 @@ export default function Weather() {
               className="form-control"
               placeholder="Enter your location"
               autoComplete="off"
+              autoFocus="on"
             />
             </div>
             <div className="col-3">
@@ -29,7 +44,7 @@ export default function Weather() {
             </div>
             </div>
       </form>
-
+      <br />
       <h1 className="city">{weatherData.city}</h1>
       <br />
 
