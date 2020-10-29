@@ -1,31 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
-export default function Weather() {
-  
-function handleResponse(response) {
-    
-alert(`It is ${Math.round(response.data.main.temp)} degrees in London`);
+export default function Weather(props) {
+const [weatherData, setweatherData] = useState({ ready:false });
 
+function handleResponse(response) {
+console.log(response.data);
+setweatherData({
+ready: true,
+iconUrl: "http://apidev.accuweather.com/developers/Media/Default/WeatherIcons/21-s.png",
+temperature: Math.round(response.data.main.temp),
+date: "Sunday 09:02",
+description: response.data.weather[0].description,
+wind: response.data.wind.speed,
+humidity: response.data.main.humidity,
+city: response.data.name
+
+});
 }
 
-let apiKey = "d01a8031900e2023529537f3248e4cb4";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`
-
-axios.get(apiUrl).then(handleResponse);
-
-
-  let weatherData = {
-    city: "Madrid",
-    date: "Sunday 09:00",
-    temperature: 65,
-    description: "Cloudy Skies",
-    imgUrl:
-      "http://apidev.accuweather.com/developers/Media/Default/WeatherIcons/21-s.png",
-    humidity: 80,
-    wind: 20
-  };
-
+if(weatherData.ready) {
   return (
     <div className="Weather">
       <form className="form">
@@ -40,7 +34,7 @@ axios.get(apiUrl).then(handleResponse);
             />
             </div>
             <div className="col-3">
-            <input class="btn btn-primary w=100" type="submit" value="Search" />
+            <input className="btn btn-primary w=100" type="submit" value="Search" />
             </div>
             </div>
       </form>
@@ -54,9 +48,8 @@ axios.get(apiUrl).then(handleResponse);
           <span className="date"></span>
         </p>
       </div>
-
       <div className="weather-temp">
-        <img src={weatherData.imgUrl} alt={weatherData.description} />
+        <img src={weatherData.iconUrl} alt={weatherData.description} />
         <span className="temp">{weatherData.temperature}</span>
         <small className="degrees">
           <a href="/">℃</a> | <a href="/">℉</a>
@@ -79,4 +72,13 @@ axios.get(apiUrl).then(handleResponse);
       <br />
     </div>
   );
+}else{
+
+const apiKey = "d01a8031900e2023529537f3248e4cb4";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`
+
+axios.get(apiUrl).then(handleResponse);
+
+return "Loading...";
+}
 }

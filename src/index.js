@@ -12,7 +12,7 @@ import "./Styles.css";
 function App() {
   return (
     <div className="App">
-      <Weather />
+      <Weather defaultCity="Moscow" />
       <Footer />
     </div>
   );
