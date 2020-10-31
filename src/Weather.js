@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
 const [weatherData, setweatherData] = useState({ ready:false });
@@ -8,14 +9,13 @@ function handleResponse(response) {
 console.log(response.data);
 setweatherData({
 ready: true,
+date: new Date(response.data.dt * 1000),
 iconUrl: "http://apidev.accuweather.com/developers/Media/Default/WeatherIcons/21-s.png",
 temperature: Math.round(response.data.main.temp),
-date: "Sunday 09:02",
 description: response.data.weather[0].description,
 wind: response.data.wind.speed,
 humidity: response.data.main.humidity,
 city: response.data.name
-
 });
 }
 
@@ -44,7 +44,7 @@ if(weatherData.ready) {
 
       <div className="time-date">
         <p>
-          Last Updated:{weatherData.date}
+        <FormattedDate date={weatherData.date} />
           <span className="date"></span>
         </p>
       </div>
