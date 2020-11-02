@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function () {
+export default function Footer() {
   return (
     <footer>
       <a href="https://github.com/AkilaNW/weather-react.git">
