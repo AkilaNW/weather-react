@@ -7,7 +7,6 @@ const [weatherData, setweatherData] = useState({ ready:false });
 const [city, setCity] = useState(props.defaultCity);
 
 function handleResponse(response) {
-console.log(response.data);
 setweatherData({
 ready: true,
 date: new Date(response.data.dt * 1000),
@@ -22,7 +21,7 @@ city: response.data.name
 
 function search() {
 const apiKey = "d01a8031900e2023529537f3248e4cb4";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
+let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
 axios.get(apiUrl).then(handleResponse);
 }
 
@@ -47,7 +46,7 @@ if(weatherData.ready) {
               placeholder="Enter your location"
               autoComplete="off"
               autoFocus="on"
-              onChange={changeCity}//whenever this is changed generate a city
+              onChange={changeCity}
             />
             </div>
             <div className="col-3">
