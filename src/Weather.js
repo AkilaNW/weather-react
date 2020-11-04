@@ -26,7 +26,7 @@ axios.get(apiUrl).then(handleResponse);
 }
 
 function handleSubmit(event) {
-event.preventDefualt();
+event.preventDefault();
 search();
 }
 
