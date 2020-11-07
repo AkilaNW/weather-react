@@ -32,9 +32,9 @@ input {
   font-family: inherit;
 }
 
-img {
-  width: 60px;
-  height: 54px;
+canvas {
+  width: 80px;
+  height: 65px;
 }
 body {
   font-family: "Roboto";
@@ -142,4 +142,8 @@ footer {
 
 .format {
   font-size: 20px;
+}
+div.container {
+  position: relative;
+  bottom: 65px;
 }

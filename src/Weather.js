@@ -10,7 +10,7 @@ function handleResponse(response) {
 setweatherData({
 ready: true,
 date: new Date(response.data.dt * 1000),
-iconUrl: "http://apidev.accuweather.com/developers/Media/Default/WeatherIcons/21-s.png",
+iconUrl: response.data.weather[0].icon,
 temperature: Math.round(response.data.main.temp),
 description: response.data.weather[0].description,
 wind: response.data.wind.speed,

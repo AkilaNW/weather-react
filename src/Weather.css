@@ -25,5 +25,6 @@
 }
 .weather-temp {
   position: relative;
-  left: 165px;
+  left: 175px;
+  bottom: 65px;
 }
