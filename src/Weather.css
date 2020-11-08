@@ -2,8 +2,8 @@
   margin: 0 auto;
   margin-top: 10%;
   padding: 10px 50px;
-  height: 550px;
-  width: 550px;
+  height: 570px;
+  width: 650px;
   border-radius: 35px;
   background-image: linear-gradient(to top, #fddb92 0%, #82e2e7 100%);
   box-shadow: 2px 3px 14px rgba(0, 0, 0, 0.2);
@@ -25,6 +25,6 @@
 }
 .weather-temp {
   position: relative;
-  left: 175px;
+  left: 160px;
   bottom: 65px;
 }
