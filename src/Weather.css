@@ -1,5 +1,6 @@
 .Weather {
   font-family: "HelveticaNeue-Thin";
+  color: aliceblue;
   font-weight: lighter;
   margin: 0 auto;
   margin-top: 10%;
@@ -7,7 +8,7 @@
   height: 570px;
   width: 650px;
   border-radius: 35px;
-  background-image: linear-gradient(to top, #fddb92 0%, #82e2e7 100%);
+  background-color: #9ab3f5;
   box-shadow: 2px 3px 14px rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
 }

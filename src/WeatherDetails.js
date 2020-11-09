@@ -14,7 +14,7 @@ return (
         </span>
       </div>
       <div className="weather-temp">
-      <span className="Icon"><WeatherIcon code={props.data.icon} /></span>
+      <span className="Icon"><WeatherIcon code={props.data.iconUrl} /></span>
       <span className="Temp"><WeatherTempearature celsius={props.data.temperature} /></span>
       </div>
 
