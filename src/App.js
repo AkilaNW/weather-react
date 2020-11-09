@@ -9,7 +9,7 @@ import "./Styles.css";
 export default function App() {
   return (
     <div className="App">
-      <Weather defaultCity="Madrid" />
+      <Weather defaultCity="New York" />
       <Footer />
     </div>
   );

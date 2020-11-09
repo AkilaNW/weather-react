@@ -1,8 +1,6 @@
 .WeatherForecast canvas {
-  font-size: 10px;
   display: block;
   margin: 1px auto;
-  padding: 0;
 }
 
 .WeatherForecast {

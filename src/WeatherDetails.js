@@ -14,8 +14,8 @@ return (
         </span>
       </div>
       <div className="weather-temp">
-      <WeatherIcon code={props.data.icon} />
-      <WeatherTempearature celsius={props.data.temperature} />
+      <span className="Icon"><WeatherIcon code={props.data.icon} /></span>
+      <span className="Temp"><WeatherTempearature celsius={props.data.temperature} /></span>
       </div>
 
       <div className="header">
