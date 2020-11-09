@@ -147,3 +147,16 @@ div.container {
   position: relative;
   bottom: 65px;
 }
+span.temp {
+  position: relative;
+  left: 4px;
+}
+small.degrees {
+  position: relative;
+  left: 10px;
+}
+span.Temp {
+  position: relative;
+  right: 6px;
+  font-weight: bolder;
+}
